@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include head %>
+  
+  <body>
+    <%- include topBar %>
+
+    <%- include navBar %>
+
+  <div class="d-flex align-content-start flex-wrap">
+
+  <div class="col team-card">
+    <img class="img-team" src= "<%= team.photo%>" alt="Card image cap">
+    <div class="team-info">
+    <h4><%= team.name%></h4> 
+    <p><%= team.excerpt%><p>    
+    <a href="mailto:<%= team.email%>" class="team-email"><%= team.email%></a>
+    <div>
+    <a href="<%= team.linkedin%>" class="team-linkedin"><i class="fab fa-linkedin"></i></a>
+    </div>
+    </div>
+  </div> 
+
+  <div class="col team-content">
+    <p><%= team.content%></p>
+    <hr class="solid">
+  </div>
+
+  
+
+
+  </div>
+
+    <%- include footer %>
+ 
+  </body>
+</html>

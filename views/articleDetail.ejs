@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include head %>
+  
+  <body>
+    <%- include topBar %>
+
+    <%- include navBar %>
+    <header class="bg-primary-articles">
+      <div class="container h-100"> 
+        <div class="row h-100 align-items-center">
+          <div class="expertise col-lg-12">
+              <h1 class="text-white">Articulos</h1>
+              <h4 class="text-white">Enterate de las ultimas novedades</h4>
+          </div>
+        </div>
+      </div>
+  </header>
+    <div class="container auto text-center">
+      <div class="col-12 mx-auto text-center">
+          <div class="expertise-tittle">
+              <h1 class="expertise"><%= articles.title%></h1>
+          </div>
+      </div>
+    </div>
+    
+    <div class="expertise-content">
+    <p><%= articles.excerpt%></p>
+    <p><%= articles.content%></p>
+  </div>
+
+    <%- include footer %>
+ 
+  </body>
+</html>

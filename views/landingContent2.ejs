@@ -1,0 +1,26 @@
+
+       
+    
+          <div class="card-group">
+        
+        
+            <% expertises.forEach (expertise => { %>
+        
+          <div class="col">
+            <div class="card">
+              <a href="expertise/detail/<%= expertise.id%>" class="home-link-expertise">
+                <img class="card-img-top" src="<%= expertise.photo%>" alt="Card image cap">
+                
+                <div class="card-body">
+                  <h3 class="card-title"><%= expertise.category%></h3>
+                  <p class="card-text"><%= expertise.excerpt%></p>
+                </div>
+              </a>
+              </div>
+            
+            </div>
+        
+            <% }) %>
+        
+          </div>
+

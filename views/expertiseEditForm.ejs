@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <%- include head %>
+
+<body>
+
+   <div class="container edit-form-header">
+      <div class="col-12 mx-auto text-center">
+         <div class="header-title">
+            <h1 class="wv-heading--title">
+               Editar servicio
+            </h1>
+         </div>
+      </div>
+  
+         <div class="container edit-form">
+            <div class="col-12 mx-auto">
+
+               <div class="myform form">
+                
+                  <form action="/expertise/edit/<%=expertise.id%>?_method=put" name="edit-expertise" method="POST">
+                     <input type="hidden" name="_method" value="PUT" >
+
+                     <div class="row">
+                        <div class="col">
+                           <div class="form-group">
+                              <label for="category">Categoria</label>
+                              <input type="text" name="category"  class="form-control my-input" value= "<%= expertise.category%>" id="category" required="required" minlength="10" maxlength="33">
+                          
+                           </div>
+                         
+                           <div class="form-group">
+                              <label for="excerpt">Copete</label>
+                              <input type="text" name="excerpt"  class="form-control my-input" value= "<%= expertise.excerpt%>" id="excerpt" required="required" minlength="10" maxlength="200">
+                           </div>
+                         
+                           <div class="form-group">
+                            <label for="content">Contenido</label>
+                            <input type="text" name="content"  class="form-control my-input" value= "<%= expertise.content%>" id="content" required="required" minlength="50" maxlength="3000">
+                          </div>
+
+                           <div class= "dropdown-divider"> </div>
+             
+
+                           
+                        <div class="form-group">
+                           <label for="photo">Imagen</label>
+                                 <div class="col-6 text-left"><img src="<%= expertise.photo%>" width="350" height="250" class="img-edit-content" alt="#"></div>
+                    
+                    
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-6 text-right"><input type="url" name="img"  class="form-control my-input" id="img" value="<%= expertise.photo%>" required="required"></div>
+
+                        </div>
+
+                          <div class= "dropdown-divider"> </div>
+                          
+                
+                       <div class="text-center">
+                        <button type="submit" class="myButton">Enviar</button>
+                       </div>
+                  </form>
+                  
+               </div>
+            </div>
+         </div>       
+
+
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <%- include head %>
+
+<body>
+   <div class="container auto text-center">
+   
+    <form action="/team/delete/<%=team.id%>?_method=delete" name="delete-team" method="POST">
+        <input type="hidden" name="_method" value="DELETE" >
+
+        <div class="text-center">
+         <h4>¿Estas seguro de eliminar este integrante?</h4>
+         <br>
+         <button class="myButton" type="submit">Eliminar</button>
+        </div>
+
+    </form>
+        
+                  
+
+            </div>
+
+
+ 
+
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include head %>
+  
+  <body>
+    <%- include topBar %>
+
+    <%- include navBar %>
+
+    <header class="bg-primary-expertise">
+      <div class="container h-100"> 
+        <div class="row h-100 align-items-center">
+          <div class="expertise col-lg-12">
+              <h1 class="text-white">Servicios</h1>
+              <h4 class="text-white">Nuestra meta principal es ofrecer a nuestros clientes asesoramiento legal integral de excelencia. Brindamos soluciones estratégicas a medida en todas las áreas del derecho corporativo. Para ello, contamos con un equipo de especialistas con profundo conocimiento de la profesión y de las claves del negocio en las distintas industrias, muchos de los cuales han estudiado o trabajado en las principales ciudades del mundo.</h4>
+          </div>
+        </div>
+      </div>
+  </header>
+
+
+
+  <div class="container auto text-center">
+    <div class="col-12 mx-auto text-center">
+        <div class="expertise-tittle">
+            <h1 class="expertise"><%= expertise.category%></h1>
+            <h5 class="expertise">Contactenos para ser acesorado por nuestros profesionales</h5>
+        </div>
+    </div>
+  </div>
+  
+  <div class="expertise-content">
+  <p><%= expertise.excerpt%></p>
+  <p><%= expertise.content%></p>
+</div>
+
+
+<div class="col-6 mx-auto text-center">
+<div class="expertise-contact">
+
+<div class="contact-item-whatsapp">  
+<a class= "contact-item-whatsapp" href="#">
+<i class="fab fa-whatsapp-square"></i>
+</a>
+</div>  
+
+<a class= expertise-link href="#">Contactenos</a> 
+
+
+</div>
+</div>
+
+
+
+
+
+    <%- include footer %>
+
+
+
+  </body>
+</html>

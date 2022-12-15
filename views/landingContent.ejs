@@ -1,0 +1,33 @@
+
+    
+  <div class="card-group">
+
+
+    <% articles.forEach (article => { %>
+
+  <div class="col">
+    
+    <div class="card">
+      <a href="article/detail/<%= article.id%>" class="home-link-article">
+        <img class="card-img-top" src= "<%= article.photo%>" alt="Card image cap">
+        
+        <div class="card-body">
+          <h4 class="card-title"><%= article.title%></h4>
+          <p class="card-text"><%= article.excerpt%></p>
+        </div>
+      </a>
+      </div>
+    
+    </div>
+
+    <% }) %>
+
+  </div>
+
+
+  
+
+
+                
+                
+            

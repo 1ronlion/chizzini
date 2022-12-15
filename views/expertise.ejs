@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include head %>
+  
+  <body>
+    <%- include topBar %>
+
+    <%- include navBar %>
+
+    <header class="bg-primary-expertise">
+      <div class="container h-100"> 
+        <div class="row h-100 align-items-center">
+          <div class="expertise col-lg-12">
+              <h1 class="text-white">Servicios</h1>
+              <h4 class="text-white">Nuestra meta principal es ofrecer a nuestros clientes asesoramiento legal integral de excelencia. Brindamos soluciones estratégicas a medida en todas las áreas del derecho corporativo. Para ello, contamos con un equipo de especialistas con profundo conocimiento de la profesión y de las claves del negocio en las distintas industrias, muchos de los cuales han estudiado o trabajado en las principales ciudades del mundo.</h4>
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <div class="container expertise-list auto text-center">
+    <div class="col-12 mx-auto text-center">
+        <div class="expertise-tittle">
+            <h1 class="expertise">Areas de practica</h1>
+            <h5 class="expertise">Contactenos para ser acesorado en las siguientes areas del derecho</h5>
+        </div>
+    <div class="row">
+
+
+    <% expertises.forEach (expertise => { %>
+      <div class="expertise col-6">
+        <div class="alert alert-secondary" role="alert">
+            <a href="expertise/detail/<%= expertise.id%>">
+            <span class="text-muted font-weight-normal d-block" id="#"><%= expertise.category%></span>
+            </a>
+        </div>
+      </div>
+      <% }) %>
+
+
+
+        
+
+
+      
+        
+
+
+    </div>  
+      </div>
+      </div>
+
+    <%- include footer %>
+
+  </body>
+</html>

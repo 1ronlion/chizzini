@@ -1,0 +1,36 @@
+
+    <div class="card-group">
+         
+    <% teams.forEach (team => { %>
+      
+      
+      <div class="col">
+        
+        <div class="card" > 
+          <a href="team/detail/<%= team.id%>" class="team-link">
+          
+            <img class="card-img-team" src= "<%= team.photo%>" alt="Card image cap">
+            <div class="card-body-team">
+              
+              <h3 class="card-title"><%= team.name%></h3>
+              <h4 class="card-text"><%= team.excerpt%></h4>
+              
+            </div>
+
+           
+           
+
+         
+          </a> 
+          </div>
+        
+        </div>
+      
+      
+      
+  
+        <% }) %>
+  
+    
+    </div>
+

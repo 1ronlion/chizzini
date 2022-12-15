@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include head %>
+  
+  <body>
+    <div class="dash-container auto text-center">
+    <div>
+      <a href="/">
+      <img class="img" src="/images/Logo3.png">
+    </a>
+      </div>
+    </div>
+  
+                 
+ <div class="container auto text-center">
+   <div class="row dashboard">
+  
+  <div class="col-4 text-center">   
+      <div class="card h-100">
+      <h4 class="dash-tittle">Articulos</h4>
+
+      <a href="/article/redact" class="dash-create">Añadir nuevo articulo </a>  
+  
+   
+      <% articles.forEach (article => { %>
+  
+          <div class="alert alert-light text-left ">
+              <span class="text-muted font-weight-normal d-block" id="articles"><%= article.title %></span>
+              <a href="/article/detail/<%= article.id%>" class="dash-link"> Ver</a> 
+              <a href="/article/edit/<%= article.id %>" class="dash-link"> Editar</a> 
+              <a href="/article/delete/<%= article.id %>" class="dash-link"> Eliminar</a>
+
+          </div>
+
+
+      <% }) %> 
+  
+  </div>
+  </div>
+
+
+  <div class="col-4 text-center">   
+    <div class="card h-100">
+    <h4 class="dash-tittle"> Equipo</h4>
+
+    <a href="/team/redact"" class="dash-create">Añadir nuevo integrante</a>  
+
+ 
+    <% teams.forEach (team => { %>
+
+        <div class="alert alert-light text-left ">
+            <span class="text-muted font-weight-normal d-block" id="teams"><%= team.name %></span>
+            <a href="/team/detail/<%= team.id %>" class="favbuttonGrey">Ver</a> 
+            <a href="/team/edit/<%= team.id %>" class="favbuttonGrey">Editar</a> 
+            <a href="/team/delete/<%= team.id %>" class="favbuttonGrey">Eliminar</a>
+        </div>
+
+    <% }) %> 
+
+</div>
+</div>
+
+
+<div class="col-4 text-center">   
+  <div class="card h-100">
+  <h4 class="dash-tittle">Servicios</h4>
+
+  <a href="/expertise/redact" class="dash-create">Añadir nuevo servicio</a>  
+
+
+  <% expertises.forEach (expertise => { %>
+
+      <div class="alert alert-light text-left ">
+          <span class="text-muted font-weight-normal d-block" id="teams"><%= expertise.category %></span>
+          <a href="/expertise/detail/<%= expertise.id %>" class="favbuttonGrey">Ver</a> 
+          <a href="/expertise/edit/<%= expertise.id %>" class="favbuttonGrey">Editar</a> 
+          <a href="/expertise/delete/<%= expertise.id %>" class="favbuttonGrey">Eliminar</a>
+      </div>
+
+  <% }) %> 
+
+</div>
+</div>
+
+</div>
+</div>
+
+  </body>
+</html>

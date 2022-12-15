@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <%- include head %>
+
+<body>
+
+   <div class="container edit-form-header">
+      <div class="col-12 mx-auto text-center">
+         <div class="header-title">
+            <h1 class="wv-heading--title">
+               Editar integrante
+            </h1>
+         </div>
+      </div>
+  
+         <div class="container edit-form">
+            <div class="col-12 mx-auto">
+
+               <div class="myform form">
+                
+                  <form action="/team/edit/<%=team.id%>?_method=put" name="edit-team" method="POST">
+                     <input type="hidden" name="_method" value="PUT" >
+
+                     <div class="row">
+                        <div class="col">
+                           <div class="form-group">
+                              <label for="name">Nombre</label>
+                              <input type="text" name="name"  class="form-control my-input" value= "<%= team.name%>" id="name" required="required" minlength="10" maxlength="45">
+                           </div>
+
+                           <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" name="email"  class="form-control my-input" value= "<%= team.email%>" id="email" required="required" minlength="10" maxlength="50">
+                         </div>
+
+                         <div class="form-group">
+                            <label for="linkedin">Linkedin</label>
+                            <input type="text" name="linkedin"  class="form-control my-input" value= "<%= team.linkedin%>" id="linkedin" required="required" minlength="10" maxlength="50">
+                         </div>
+                         
+                           <div class="form-group">
+                              <label for="excerpt">Copete</label>
+                              <input type="text" name="excerpt"  class="form-control my-input" value= "<%= team.excerpt%>" id="excerpt" required="required" minlength="10" maxlength="100">
+                           </div>
+                         
+                           <div class="form-group">
+                            <label for="content">Contenido</label>
+                            <input type="text" name="content"  class="form-control my-input" value= "<%= team.content%>" id="content" required="required" minlength="50" maxlength="3000">
+                          </div>
+
+                           <div class= "dropdown-divider"> </div>
+             
+
+                           
+                        <div class="form-group">
+                           <label for="photo">Imagen</label>
+                                 <div class="col-6 text-left"><img src="<%= team.photo%>" width="350" height="400" class="img-edit-content" alt="#"></div>
+                  
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-6 text-right"><input type="url" name="img"  class="form-control my-input" id="img" value="<%= team.photo%>" required="required"></div>
+
+                        </div>
+
+                          <div class= "dropdown-divider"> </div>
+                          
+                
+                       <div class="text-center">
+                        <button type="submit" class="myButton">Enviar</button>
+                       </div>
+                  </form>
+                  
+               </div>
+            </div>
+         </div>       
+
+
+   </div>
+
+</body>
+</html>
