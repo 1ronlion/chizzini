@@ -50,6 +50,10 @@ function normalizePort(val) {
   return false;
 }
 
+
+console.log("Server running on port " + port);
+
+
 /**
  * Event listener for HTTP server "error" event.
  */

@@ -14,29 +14,31 @@ body {
 /*navBar*/
 
 
-.topbar {
+nav.topbar {
   background-color:#F9F5F1;
   color: #CCB38D;
   transition: top 0.5s;
   }
 
+
+
+
+ul.topbar-nav{
+
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: center;
+  padding-right: 40px;
+
+
+}
+
 li.top-item {
   padding-top: 3px;
-  padding-right: 40px;
   font-size: 28px;
 }  
 
-a.nav-email {
-  color: #CCB38D; 
-  font-size: 18px;
-  padding-left: 48px;
-  padding-right: 24px;
-  padding-top: 12px;
-  text-decoration: none;
-}  
-a.nav-email:hover {
-  color: #5E8DD4;
-  }
   
 .navbar {
 background-color: #5D0C1D;
@@ -49,13 +51,33 @@ padding-right: 40px;
 }
 
 .navBar-img {
-  padding-left: 32px;
   width: 100%;
-  }
+  min-width: 200px;
+  max-width: 400px;
+}
+
+nav.link{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+ul.navbar-nav{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 360px;
+
+}
 
 li.nav-item {
-padding-left: 48px;  
 font-size: 24px;
+padding: 0 6px 0 6px;
 }
 
 a.nav-link {
@@ -66,18 +88,6 @@ a.nav-link:hover {
 color: #5E8DD4;
 }
 
-.search {
-margin-left: 24px;
-}
-
-
-a.search{
-color: #CCB38D;  
-}
-
-a.search:hover {
-  color: #5E8DD4;
-  }
 
 a.nav-item {
   color: #CCB38D;  
@@ -539,6 +549,7 @@ a.team-linkedin:hover {
 a.dash-create {
   padding-bottom: 24px;
 }
+
 
 
 
